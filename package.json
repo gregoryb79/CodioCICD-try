@@ -1,4 +1,8 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregoryb79/CodioCICD-try.git"
+  },
   "dependencies": {
     "gh-pages": "^5.0.0",
     "jquery": "^3.7.1",
@@ -9,7 +13,7 @@
     "build": "npx parcel build src/index.html --public-url https://gregoryb79.github.io/CodioCICD-try",
     "lint": "npx eslint src/.",
     "test": "npx jest",
-    "deploy": "npm run build && npx gh-pages -d dist",
+    "deploy": "npm run build && npx gh-pages -d dist -r https://x-access-token:${GH_TOKEN}@github.com/gregoryb79/CodioCICD-try.git",
     "ci": "npm run lint && npm run test && npm run deploy"
   },
   "devDependencies": {
