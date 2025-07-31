@@ -19,13 +19,13 @@ jobs:
         node-version: 14
 
     - name: Install dependencies
-      run: npx ci
+      run: npm ci
 
     - name: Run Linter
-      run: npx run lint
+      run: npm run lint
 
     - name: Run Tests
-      run: npx run test
+      run: npm run test
 
   deploy:
     needs: build
@@ -41,7 +41,7 @@ jobs:
         node-version: 14
 
     - name: Install dependencies
-      run: npx ci
+      run: npm ci
 
     - name: Deploy to GitHub Pages
-      run: npx run deploy
+      run: npm run deploy
